@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting HTML Element</title>
+</head>
+<style>
+    .head{
+        border-radius: 5px;;
+    }
+    #div1{
+        background-color: aquamarine;
+        margin: 50px;
+        border: 2px solid violet;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 2px 1px 3px rgb(235, 72, 72);
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .list-elements{
+        display: inline-block;
+        margin: 20px;
+        /* text-decoration: underline; */
+        font-weight: 500;
+        border: 1px solid rgb(218, 24, 218);
+        padding: 8px 20px;
+        border-radius: 10px;
+    }
+    #btn{
+        display: block;
+        width:200px;
+        height: 50px;
+        background-color: rgb(22, 181, 221);
+        border-radius: 10px;
+        color: white;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    #btn1{
+        width:200px;
+        height: 50px;
+        background-color: rgb(221, 22, 188);
+        border-radius: 10px;
+        color: white;
+        font-size: 1rem;
+    }
+    .small{
+        font-size: 20px;
+        color: coral;
+    }
+    .big{
+        font-size: 50px;
+        color: rebeccapurple;
+    }
+</style>
+<body id="main" style="background-color: snow;">
+
+    <div id="div1" class="container">
+        <li class="list-elements">HOME</li>
+        <li class="list-elements">ABOUT US</li>
+        <li class="list-elements">CONTACT</li>
+        <li class="list-elements">SUPPORT</li>
+    </div>
+    <br><hr><hr><br>
+
+    <h2 id="main-heading" class="main-head head" style="border: 2px;">Add/ Remove Classes</h2>
+
+    <hr>
+    <button id="btn">Add class "BIG"</button>
+    <button id="btn1">Remove class "BIG"</button>
+
+</body>
+<script src="5_add-removeClasses.js"></script>
+</html>

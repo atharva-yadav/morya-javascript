@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        body{
+            background-color: aliceblue;
+            font-family: poppins;
+        }
+        input{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        label{
+            padding: 2px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            font-family: poppins;
+            font-size: large;
+            margin: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+            background-color: rgba(127, 255, 212, 0.377);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: -1px 12px 16px 6px #a0b2b273;
+        
+        }
+        #err-username{
+            font-weight: 300;
+            font-size: 15px;
+            color: red;
+            letter-spacing: 0.5px;
+            margin-left: 2px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="text">Email</label>
+        <input type="text" id="email">
+        <p id="err-username">Please Enter a valid username</p>
+
+        <label for="pass">password</label>
+        <input type="password" id="pass">
+        <button>Login</button>
+    </form>
+    <script src="regex_form_validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        margin: 10px;
+      }
+      h1 {
+        color: rgb(212, 37, 24);
+        text-align: center;
+        /* text-decoration: underline; */
+        font-style: normal;
+        font-size: xx-large class= "button";
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      h2 {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin-top: 20px;
+        text-shadow: 1px 1px 2px rgb(238, 255, 0);
+      }
+      p {
+        padding: 5px;
+      }
+
+      body {
+        /* padding: 20px; */
+        border: 3px solid royalblue;
+      }
+
+      div {
+        border: 3px double rgb(255, 0, 0);
+        border-radius: 15px;
+        padding: 20px;
+        background-color: #c8eef1b2;
+      }
+      #reset,
+      #submit {
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        padding: 12px 20px;
+        background-color: white;
+        border-radius: 8px;
+        color: rgb(43, 38, 38);
+        cursor: pointer;
+        width: 50%;
+      }
+
+      #reset {
+        background-color: rgb(235, 111, 111);
+      }
+      #submit {
+        background-color: rgb(84, 236, 70);
+      }
+
+      #reset:hover {
+        border: 2px solid red;
+        background-color: white;
+        text-shadow: rgb(243, 114, 39) 1px 1px 4px;
+        font-size: larger;
+      }
+      #submit:hover {
+        background-color: white;
+        border: 2px solid green;
+        text-shadow: rgb(51, 255, 0) 1px 1px 4px;
+        font-size: larger;
+      }
+
+      #buttons {
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      input[type="date"],
+      input[type="password"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      fieldset {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 8px;
+        background-color: white;
+        border-radius: 10px;
+        width: 100%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+      #address {
+        margin-top: 20px;
+      }
+      #mainhead {
+        border: rgb(36, 3, 36);
+        background-color: rgb(245, 212, 242);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        text-shadow: rgb(233, 236, 4) 1px 0px 6px;
+        border: 2px solid rgb(7, 188, 212);
+      }
+
+      .button:hover {
+        box-shadow: 7px 4px 2px rgb(105, 73, 104);
+      }
+      p {
+        font-weight: bold;
+        font-size: medium;
+      }
+      .star {
+        color: red;
+        width: 10%;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <div id="mainhead">
+        <h1>Payment Form</h1>
+      </div>
+      <hr />
+      <h2>Contact Information</h2>
+
+      <div>
+        <h4><span class="star">*</span> This sign represents required input</h4>
+        <p>
+          Name<span class="star">*</span>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Write your name"
+          />
+        </p>
+
+        <p>Gender<span class="star">*</span></p>
+        <fieldset>
+          <p><input type="radio" name="gender" id="gender" required />Male</p>
+          <p><input type="radio" name="gender" id="gender" required />Female</p>
+          <p><input type="radio" name="gender" id="gender" required />Other</p>
+        </fieldset>
+        <p id="address">
+          Address<textarea
+            name="address"
+            cols="70"
+            rows="8"
+            placeholder="Enter your residential address"
+          ></textarea>
+        </p>
+        <p>
+          Email<span class="star">*</span>
+          <input type="email" required placeholder="Enter your Email  Id" />
+        </p>
+        <p>
+          Mobile No<span class="star">*</span> <input type="number" required />
+        </p>
+        <p>
+          Pin Code<input
+            type="number"
+            required
+            placeholder="Enter your postal code"
+          />
+        </p>
+      </div>
+
+      <h2>Payment Information</h2>
+
+      <div>
+        <p>
+          Card Type:<span class="star">*</span>
+          <select name="card_type" id="card_type" style="width: 100%" required>
+            <option value="Select">--Select--</option>
+            <option value="Rupay">Rupay</option>
+            <option value="Visa">VISA</option>
+            <option value="Master Card">Master Card</option>
+          </select>
+        </p>
+        <p>
+          Card Numbe<span class="star">*</span>
+          <input
+            type="number"
+            name="cardno"
+            placeholder="Enter your 12 digit card number"
+            required
+          />
+        </p>
+        <p>
+          Expiray Date<span class="star">*</span>
+          <input type="date" name="expdate" placeholder="DD/MM/YYYY" required />
+        </p>
+        <p>
+          CVV<span class="star">*</span>
+          <input
+            type="password"
+            name="cvv"
+            placeholder="Enter your CVV"
+            required
+          />
+        </p>
+      </div>
+      <br />
+      <div id="buttons">
+        <input type="submit" value="Pay Now" id="submit" class="button" />
+        <input type="reset" name="Reset" id="reset" class="button" />
+      </div>
+    </form>
+
+    <script src="7_formEvents.js"></script>
+
+  </body>
+</html>
